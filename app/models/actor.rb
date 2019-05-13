@@ -9,8 +9,11 @@ class Actor < ActiveRecord::Base
   def list_roles 
    roles= []
    self.characters do |c| 
-     role= "#{c.name}-#{c.self.show."
-     
+     role= "#{c.name}-#{c.show.name}"
+   roles << role 
+ end 
+ roles 
+   
 end
   
 end
